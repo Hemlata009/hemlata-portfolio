@@ -49,6 +49,12 @@ All copy is data, not markup. Edit these files; the pages update.
 - Update: push to the connected branch; Netlify rebuilds.
 - Roll back: Netlify → Deploys → pick the previous deploy → *Publish deploy*.
 
+### Deploy (Vercel)
+
+`vercel.json` already sets the build command, the `dist` output and a fallback to `index.html`, so
+`/projects/...` links survive a refresh. Import the GitHub repo in Vercel and deploy; no settings or
+environment variables are needed. Roll back from the project's *Deployments* tab by promoting an earlier deployment.
+
 Keep the old site live until this one is verified, then point the domain over.
 
 ### After you know the final domain
